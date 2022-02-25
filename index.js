@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const bodyParser = require('body-parser');
 const admin = require('firebase-admin');
 const MongoClient = require('mongodb').MongoClient;
@@ -8,7 +7,6 @@ const { ObjectID } = require('mongodb').ObjectId;
 require('dotenv').config();
 const port = process.env.PORT || 8080;
 
-app.use(cors());
 app.use(bodyParser.json());
 var serviceAccount = require('./configs/book-shelf-4c0d0-firebase-adminsdk-ma8a8-446cf4e413.json');
 
